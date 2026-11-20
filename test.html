@@ -121,11 +121,70 @@
     allowfullscreen>
 </iframe>
 
+<!--Conteneur principal du tableau-->
+<table>
+<!--Titre du tableau-->
+
+<caption> Budget des dépenses du projet et SAYNA - janvier 2050</caption>
+<!--Style appliqué à des colonnes entièrs en une seule fois-->
+<colgroup>
+<col style="width: 40%;background-color: yellow;"> <!--colonnes 1 : Catégorie-->
+<col style="background-color: green;"> <!--Colonne 2 : Détail (mise en évidence)-->
+<col style="width: 20%;background-color: red;"> <!--Colonne 3 : Coût-->
+
+</colgroup>
+
+<!--En tête du tableau-->
+<thead>
+<tr>
+    <!--En têtes de colonne avec scope et id pour l'accéccibilité avancée-->
+    
+    <th id="col-categorie" scope="col">Catégorie</th>
+    <th id="col-Detail" scope="col">Detail</th>
+    <th id="col-Coût" scope="col">Coût (€)</th>
+
+</tr>
+</thead>
+<!--Corps du tableau (données principales)-->
+<tbody>
+    <tr>
+        <!--En tête de Liane avec rowspan (s'étend sur 2 Lianes )-->
+        <th id="row-formation" scope="row"rowspan="2">Formation</th>
+        <!--Cellules de données lieés aux têtes via l'attribut headers-->
+        <td headers="col-detail row-formation">Module HTML</td>
+        <td headers="col-Coût row-formation">100</td>
+    </tr>
+    <tr>
+        <!--La première cellule est "mangée" par le rowspan de la ligne précèdente-->
+         <td headers="col-detail row-formation">Module CSS</td>
+          <td headers="col-Coût row-formation">100</td>
+    </tr>
+    <tr>
+        <th id="col-materiel"scope="row">Materiel</th>
+         <td headers="col-detail row-materiel">Ordinateur</td>
+        <td headers="col-Coût row-materiel">800</td>
+    </tr>
+</tbody>
+<!--Pied du tableau (totaux)-->
+<tfoot>
+    <tr>
+        <!--1 Cellule s'étendant sur 2 colonnes (colspan)-->
+        <th scope="row" colspan=""></th>
+    </tr>
+</tfoot>
+</table>
 
 
-<!-- Integration d'image vectorielles dans un page web-->
 
-<h1>Ma premier image SVG</h1>
+
+
+
+
+
+
+
+
+
 
 
 
